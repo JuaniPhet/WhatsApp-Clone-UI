@@ -242,37 +242,6 @@ class StatusesScreen extends StatelessWidget {
               ],
             ),
           ),
-          // ListView(
-          //   // scrollDirection: Axis.horizontal,
-          //   children: [
-          //     for (int j = 0; j < 5; j++)
-          //       // Container(
-          //       //   margin: const EdgeInsets.only(
-          //       //     top: 5,
-          //       //     bottom: 30,
-          //       //   ),
-          //       //   decoration: BoxDecoration(
-          //       //     border: Border.all(
-          //       //       width: 0.2,
-          //       //       style: BorderStyle.solid,
-          //       //       color: Color.fromARGB(255, 83, 83, 83),
-          //       //     ),
-          //       //   ),
-          //       Column(
-          //         children: [
-          //           Container(
-          //             width: 50,
-          //             height: 50,
-          //             decoration: BoxDecoration(
-          //               color: Colors.primaries[j],
-          //               shape: BoxShape.circle,
-          //             ),
-          //           ),
-          //         ],
-          //       ),
-          //     // ),
-          //   ],
-          // ),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: 10,
