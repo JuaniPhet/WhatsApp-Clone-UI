@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class StatusesScreen extends StatelessWidget {
   const StatusesScreen({super.key});
@@ -67,21 +68,46 @@ class StatusesScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              Container(
-                width: 50,
-                height: 50,
-                margin: const EdgeInsets.only(
-                  left: 15,
-                ),
-                decoration: const BoxDecoration(
-                  color: Colors.grey,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.person_rounded,
-                  size: 40,
-                  color: Colors.white,
-                ),
+              Stack(
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    margin: const EdgeInsets.only(
+                      left: 15,
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.grey,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.person_rounded,
+                      size: 40,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Positioned(
+                    right: -1,
+                    bottom: -1,
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.green,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1.2,
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.add,
+                        color: Colors.white,
+                        size: 15,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 width: 15,
@@ -142,7 +168,7 @@ class StatusesScreen extends StatelessWidget {
                     width: 15,
                   ),
                   const Expanded(
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -195,7 +221,7 @@ class StatusesScreen extends StatelessWidget {
               border: Border.all(
                 width: 0.2,
                 style: BorderStyle.solid,
-                color: Color.fromARGB(255, 83, 83, 83),
+                color: const Color.fromARGB(255, 83, 83, 83),
               ),
             ),
           ),
@@ -240,6 +266,106 @@ class StatusesScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 15,
+            ),
+            child: SizedBox(
+              height: 120,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: List.generate(
+                  20,
+                  (e) => Padding(
+                    padding: EdgeInsets.only(
+                      right: 8,
+                      left: e == 0 ? 15 : 0,
+                    ),
+                    child: Container(
+                      height: 120,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.5,
+                          color: Colors.grey,
+                          style: BorderStyle.solid,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Stack(
+                            children: [
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                  color: Colors.primaries[e < 17 ? e : 0],
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                              Positioned(
+                                right: -1,
+                                bottom: -1,
+                                child: Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.green,
+                                    border: Border.all(
+                                      color: Colors.white,
+                                      width: 1.2,
+                                    ),
+                                  ),
+                                  child: const Icon(
+                                    Icons.check,
+                                    color: Colors.white,
+                                    size: 15,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            "Channel ${e + 1}",
+                            style: const TextStyle(
+                              fontSize: 13,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          Container(
+                            height: 25,
+                            width: 80,
+                            alignment: Alignment.center,
+                            decoration: const BoxDecoration(
+                              color: Color.fromARGB(255, 199, 255, 188),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                            ),
+                            child: const Text(
+                              "Follow",
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Color.fromARGB(255, 95, 95, 95),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
           Padding(

@@ -25,8 +25,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
       ][currentPageIndex],
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
-          indicatorColor: Color.fromARGB(255, 199, 255, 188),
-          labelTextStyle: MaterialStateProperty.all(
+          indicatorColor: const Color.fromARGB(255, 199, 255, 188),
+          labelTextStyle: WidgetStateProperty.all(
             const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,
@@ -40,7 +40,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
             });
           },
           selectedIndex: currentPageIndex,
-          animationDuration: Duration(milliseconds: 500),
+          animationDuration: const Duration(milliseconds: 500),
           destinations: const [
             NavigationDestination(
               icon: Icon(Icons.chat_outlined),

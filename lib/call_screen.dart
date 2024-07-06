@@ -132,7 +132,7 @@ class CallScreen extends StatelessWidget {
                     width: 15,
                   ),
                   const Expanded(
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -149,7 +149,7 @@ class CallScreen extends StatelessWidget {
                               size: 17,
                               color: Colors.green,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -193,7 +193,7 @@ class CallScreen extends StatelessWidget {
                     width: 15,
                   ),
                   const Expanded(
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -211,7 +211,7 @@ class CallScreen extends StatelessWidget {
                               size: 17,
                               color: Color.fromARGB(255, 199, 14, 1),
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -255,7 +255,7 @@ class CallScreen extends StatelessWidget {
                     width: 15,
                   ),
                   const Expanded(
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -272,7 +272,7 @@ class CallScreen extends StatelessWidget {
                               size: 17,
                               color: Colors.green,
                             ),
-                            const SizedBox(
+                            SizedBox(
                               width: 5,
                             ),
                             Text(
