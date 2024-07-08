@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'call_screen.dart';
 import 'home_screen.dart';
-import 'profil_screen.dart';
+import 'communities_screen.dart';
 import 'statuses_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
       body: [
         const HomeScreen(),
         const StatusesScreen(),
-        const ProfilScreen(),
+        const CommunitiesScreen(),
         const CallScreen(),
       ][currentPageIndex],
       bottomNavigationBar: NavigationBarTheme(

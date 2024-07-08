@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'flutter_community.dart';
 
-class ProfilScreen extends StatelessWidget {
-  const ProfilScreen({super.key});
+class CommunitiesScreen extends StatelessWidget {
+  const CommunitiesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -166,26 +167,47 @@ class ProfilScreen extends StatelessWidget {
               ),
             ),
             subtitle: const Text(
-              'Group "Lddvhbd" was added',
+              'Flutter message flutter',
             ),
-            trailing: const Text(
-              "2024-03-06",
+            trailing: const Padding(
+              padding: const EdgeInsets.only(
+                top: 9,
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    "12:34 am",
+                  ),
+                ],
+              ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(
+          Padding(
+            padding: const EdgeInsets.symmetric(
               horizontal: 12,
             ),
             child: ListTile(
-              leading: Icon(
+              leading: const Icon(
                 Icons.keyboard_arrow_right,
               ),
-              title: Text(
-                "View all",
-                style: TextStyle(
-                  fontSize: 15,
+              title: const Padding(
+                padding: EdgeInsets.only(
+                  left: 6,
+                ),
+                child: Text(
+                  "View all",
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
                 ),
               ),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => FlutterCommunity(),
+                  ),
+                );
+              },
             ),
           ),
           const SizedBox(
