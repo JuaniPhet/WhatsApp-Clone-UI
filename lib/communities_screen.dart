@@ -59,7 +59,7 @@ class CommunitiesScreen extends StatelessWidget {
                     height: 20,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.green,
+                      color: const Color.fromARGB(255, 9, 188, 89),
                       border: Border.all(
                         color: Colors.white,
                         width: 1.2,

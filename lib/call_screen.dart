@@ -58,7 +58,7 @@ class CallScreen extends StatelessWidget {
                   left: 15,
                 ),
                 decoration: const BoxDecoration(
-                  color: Colors.green,
+                  color: const Color.fromARGB(255, 9, 188, 89),
                   shape: BoxShape.circle,
                 ),
                 child: const Icon(
@@ -110,7 +110,7 @@ class CallScreen extends StatelessWidget {
           for (int i = 0; i < 3; i++)
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 10,
+                horizontal: 15,
                 vertical: 15,
               ),
               child: Row(
@@ -145,9 +145,9 @@ class CallScreen extends StatelessWidget {
                         Row(
                           children: [
                             Icon(
-                              Icons.arrow_upward,
+                              Icons.call_made,
                               size: 17,
-                              color: Colors.green,
+                              color: const Color.fromARGB(255, 9, 188, 89),
                             ),
                             SizedBox(
                               width: 5,
@@ -171,7 +171,7 @@ class CallScreen extends StatelessWidget {
           for (int i = 0; i < 4; i++)
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 10,
+                horizontal: 15,
                 vertical: 15,
               ),
               child: Row(
@@ -207,7 +207,7 @@ class CallScreen extends StatelessWidget {
                         Row(
                           children: [
                             Icon(
-                              Icons.arrow_downward,
+                              Icons.call_received,
                               size: 17,
                               color: Color.fromARGB(255, 199, 14, 1),
                             ),
@@ -233,7 +233,7 @@ class CallScreen extends StatelessWidget {
           for (int i = 0; i < 6; i++)
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 10,
+                horizontal: 15,
                 vertical: 15,
               ),
               child: Row(
@@ -268,9 +268,9 @@ class CallScreen extends StatelessWidget {
                         Row(
                           children: [
                             Icon(
-                              Icons.arrow_downward,
+                              Icons.call_received,
                               size: 17,
-                              color: Colors.green,
+                              color: const Color.fromARGB(255, 9, 188, 89),
                             ),
                             SizedBox(
                               width: 5,
@@ -292,6 +292,16 @@ class CallScreen extends StatelessWidget {
               ),
             ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        heroTag: "call_add",
+        onPressed: () {},
+        backgroundColor: const Color.fromARGB(255, 9, 188, 89),
+        child: const Icon(
+          Icons.add_call,
+          size: 25,
+          color: Colors.white,
+        ),
       ),
     );
   }

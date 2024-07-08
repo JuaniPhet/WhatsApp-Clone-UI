@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
           "WhatsApp",
           // textAlign: TextAlign.center,
           style: TextStyle(
-            color: Colors.green,
+            color: Color.fromARGB(255, 9, 188, 89),
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 10,
+              horizontal: 15,
               vertical: 15,
             ),
             child: Row(
@@ -145,7 +145,7 @@ class HomeScreen extends StatelessWidget {
           for (int i = 0; i < 20; i++)
             Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 10,
+                horizontal: 15,
                 vertical: 15,
               ),
               child: Row(
@@ -191,13 +191,13 @@ class HomeScreen extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
-                          color: Colors.green,
+                          color: Color.fromARGB(255, 9, 188, 89),
                         ),
                       ),
                       Container(
                         padding: const EdgeInsets.all(6),
                         decoration: const BoxDecoration(
-                          color: Colors.green,
+                          color: Color.fromARGB(255, 9, 188, 89),
                           shape: BoxShape.circle,
                         ),
                         child: Text(
@@ -215,6 +215,15 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: const Color.fromARGB(255, 9, 188, 89),
+        child: const Icon(
+          Icons.chat,
+          size: 25,
+          color: Colors.white,
+        ),
       ),
     );
   }

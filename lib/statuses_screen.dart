@@ -315,7 +315,8 @@ class StatusesScreen extends StatelessWidget {
                                   height: 20,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: Colors.green,
+                                    color:
+                                        const Color.fromARGB(255, 9, 188, 89),
                                     border: Border.all(
                                       color: Colors.white,
                                       width: 1.2,
@@ -379,7 +380,7 @@ class StatusesScreen extends StatelessWidget {
                   height: 35,
                   alignment: Alignment.center,
                   decoration: const BoxDecoration(
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 9, 188, 89),
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                   padding: const EdgeInsets.symmetric(
@@ -395,6 +396,37 @@ class StatusesScreen extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox.fromSize(
+            size: Size.square(42),
+            child: FloatingActionButton(
+              heroTag: "print_statut",
+              onPressed: () {},
+              backgroundColor: Color.fromARGB(255, 224, 226, 225),
+              child: const Icon(
+                Icons.edit,
+                size: 25,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          FloatingActionButton(
+            heroTag: "photo_statut",
+            onPressed: () {},
+            backgroundColor: const Color.fromARGB(255, 9, 188, 89),
+            child: const Icon(
+              Icons.camera_alt,
+              size: 25,
+              color: Colors.white,
             ),
           ),
         ],

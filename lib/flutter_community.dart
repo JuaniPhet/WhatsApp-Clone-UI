@@ -136,10 +136,11 @@ class FlutterCommunity extends StatelessWidget {
               'Message flutter message',
             ),
             trailing: const Padding(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 9,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     "12:34 am",
@@ -156,6 +157,20 @@ class FlutterCommunity extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            height: 200,
+          ),
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Other groups added to the community will appear here.",
+              ),
+              Text(
+                "Community members can join these groups.",
+              )
+            ],
+          )
         ],
       ),
       bottomNavigationBar: Padding(
